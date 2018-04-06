@@ -1,0 +1,25 @@
+$lightgrey-header: #f0f0f0;
+$lightgrey: lightgrey;
+$blue: #2356A2;
+
+
+.task-container{
+  background: white;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-bottom: 1px solid $lightgrey;
+  .todo-item{
+    margin: 0;
+    font-weight: 100;
+    font-size: 30px;
+    color: $blue;
+  }
+  .task-radio {
+    margin: .85rem;
+  }   
+}
