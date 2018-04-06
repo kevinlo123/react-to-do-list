@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import '../stylesheets/Header.scss';
 
 class Header extends Component {
-  constructor(){
+  constructor() {
     super();
     let date = new Date();
     let dd = date.getDate();  //current day
