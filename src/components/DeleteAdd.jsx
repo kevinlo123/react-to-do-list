@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import '../stylesheets/Footer.scss'
+import '../stylesheets/DeleteAdd.scss'
 
-class Footer extends Component{
+class DeleteAdd extends Component{
   render(){
       return(
         <footer>
@@ -16,4 +16,4 @@ class Footer extends Component{
   }
 }
 
-export default Footer;
+export default DeleteAdd;

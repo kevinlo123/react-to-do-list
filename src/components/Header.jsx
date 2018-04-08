@@ -3,7 +3,7 @@ import '../stylesheets/Header.scss';
 import ToDoItem from './To-do-item.jsx';
 
 
-class Header extends Component {
+class Header_also_todos extends Component {
   constructor() {
     super();
     let date = new Date();
@@ -44,4 +44,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default Header_also_todos;
