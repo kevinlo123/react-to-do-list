@@ -12,11 +12,15 @@ $blue: #2356A2;
   margin: 0 auto;
   padding: 1rem;
   border-bottom: 1px solid $lightgrey;
+  &:hover {
+    background: whitesmoke;
+    transition: .5s all;
+  }
   .todo-item, .checked {
-    margin: 0;
+    margin: 0.2rem 0;
     font-weight: 100;
-    font-size: 30px;
-    color: $blue;
+    font-size: 28px;
+    color: #2356A2;
     transition: .5s all;
   }
   .checked {

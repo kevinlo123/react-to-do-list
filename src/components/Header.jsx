@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import '../stylesheets/Header.scss';
+import ToDoItem from './To-do-item.jsx';
+
 
 class Header extends Component {
   constructor() {
@@ -11,8 +13,18 @@ class Header extends Component {
     date = `${mm}/${dd}/${yyyy}`;
     this.state = {
       date: date,
-      tasksPending: 0
+      tasksPending: 5,
     }
+  }
+  ontasksPendingDone(){
+    this.setState({
+      tasksPending : this.state.tasksPending - 1
+    });
+  }
+  ontasksPendingNotDone(){
+    this.setState({
+      tasksPending : this.state.tasksPending + 1
+    });
   }
   render() {
     return(
@@ -22,6 +34,11 @@ class Header extends Component {
           <h1 className="date-header">{this.state.date}</h1>
           <h2 className="tasks-pending-header">{this.state.tasksPending} tasks Pending</h2>
         </header>
+        <ToDoItem task="Get a haircut" ontasksPendingDone={this.ontasksPendingDone.bind(this)} ontasksPendingNotDone={this.ontasksPendingNotDone.bind(this)}/>
+        <ToDoItem task="Walk the dog" ontasksPendingDone={this.ontasksPendingDone.bind(this)} ontasksPendingNotDone={this.ontasksPendingNotDone.bind(this)}/>
+        <ToDoItem task="meeting @ 5pm" ontasksPendingDone={this.ontasksPendingDone.bind(this)} ontasksPendingNotDone={this.ontasksPendingNotDone.bind(this)}/>
+        <ToDoItem task="Groceries" ontasksPendingDone={this.ontasksPendingDone.bind(this)} ontasksPendingNotDone={this.ontasksPendingNotDone.bind(this)}/>
+        <ToDoItem task="Code" ontasksPendingDone={this.ontasksPendingDone.bind(this)} ontasksPendingNotDone={this.ontasksPendingNotDone.bind(this)}/>
       </div>
     );
   }

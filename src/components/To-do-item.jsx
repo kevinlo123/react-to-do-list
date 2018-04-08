@@ -7,7 +7,7 @@ class ToDoItem extends Component {
     this.state = {
       taskDone: false,
       item: "todo-item",
-      custom_radio: "custom-radio"
+      custom_radio: "custom-radio",
     };
   }
   taskFinished() {
@@ -15,15 +15,16 @@ class ToDoItem extends Component {
       this.setState({
         taskDone: true,
         item: "checked",
-        custom_radio: "custom-radio-checked"
+        custom_radio: "custom-radio-checked",
       });
     }else if(this.state.taskDone){
       this.setState({
         taskDone: false,
         item: "todo-item",
-        custom_radio: "custom-radio"
+        custom_radio: "custom-radio",
       });
     }
+    this.state.custom_radio === "custom-radio" ? this.props.ontasksPendingDone() : this.props.ontasksPendingNotDone();
   }
   render() {
     return(

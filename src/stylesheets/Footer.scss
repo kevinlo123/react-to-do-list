@@ -1,0 +1,34 @@
+$lightgrey-header: #f0f0f0;
+$lightgrey: lightgrey;
+$white: #fff;
+$blue: #2356A2;
+
+footer {
+  background: $lightgrey-header;
+  width: 50%;
+  border-radius: 0px 0px 5px 5px;
+  display: flex;
+  justify-content: space-between;
+  min-width: 300px;
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  border-bottom: 1px solid $lightgrey;
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+  .fa-trash-alt, .fa-plus {
+    background: linear-gradient(rgba(255 , 0 , 59 , 0.90), rgba( 255 , 0 , 59 , 0.90));
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23); 
+    color: $white;
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 18px;
+    &:hover {
+      transform: scale(1.2);
+      transition: .5s all;        
+    }
+  }
+  .fa-plus{
+    background: limegreen;
+  }
+}
