@@ -1,17 +1,27 @@
 import React, { Component } from 'react';
-import Header_also_todos from './Header.jsx';
-import ToDoItem from './To-do-item.jsx';
-import DeleteAdd from './DeleteAdd.jsx';
+import HeaderAlsoTodos from './Header.jsx';
 
 class App extends Component {
-  render() {
-    return (
-      <div className="App-wrapper">
-        <Header_also_todos/>
-        <DeleteAdd/>
-      </div>
-    );
+
+   constructor() {
+      super();
+      let date = new Date();
+      let dd = date.getDate();  //current day
+      let mm = date.getMonth() + 1; // current month January = 0
+      let yyyy = date.getFullYear(); // current year
+      date = `${mm}/${dd}/${yyyy}`;
+      this.state = {
+         date: date
+      }
   }
+
+   render() {
+      return (
+         <div className="App-wrapper">
+            <HeaderAlsoTodos date={this.state.date}/>
+         </div>
+      );
+   }
 }
 
 export default App;

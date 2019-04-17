@@ -23,9 +23,9 @@ footer {
     padding: 1rem;
     cursor: pointer;
     font-size: 18px;
+    transition: all .4s ease-in-out;
     &:hover {
       transform: scale(1.2);
-      transition: .5s all;        
     }
   }
   .fa-plus{
