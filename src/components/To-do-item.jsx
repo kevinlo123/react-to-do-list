@@ -51,14 +51,23 @@ class ToDoItem extends Component {
    }
 
    addItem(item) {
+      let newItem;
       if (item === "") {
          alert("New item cannot be blank!");
       } else {
-         const newItem = {
-            id: this.state.toDos[this.state.toDos.length - 1].id + 1,
-            task: item,
-            done: false
-         };
+         if(this.state.toDos.length === 0) {
+            newItem = {
+               id: 1,
+               task: item,
+               done: false
+            };
+         } else {
+            newItem = {
+               id: this.state.toDos[this.state.toDos.length - 1].id + 1,
+               task: item,
+               done: false
+            };
+         }
          this.state.toDos.push(newItem);
          this.setState({
             toDos: this.state.toDos
