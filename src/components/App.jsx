@@ -6,9 +6,9 @@ class App extends Component {
    constructor() {
       super();
       let date = new Date();
-      let dd = date.getDate();  //current day
-      let mm = date.getMonth() + 1; // current month January = 0
-      let yyyy = date.getFullYear(); // current year
+      let dd = date.getDate(); 
+      let mm = date.getMonth() + 1; 
+      let yyyy = date.getFullYear();
       date = `${mm}/${dd}/${yyyy}`;
       this.state = {
          date: date

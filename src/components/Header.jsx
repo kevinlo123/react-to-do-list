@@ -10,6 +10,8 @@ class HeaderAlsoTodos extends Component {
       this.state = {
          tasksLeft: 5
       };
+      this.ontasksPendingDone = this.ontasksPendingDone.bind(this);
+      this.ontasksPendingNotDone = this.ontasksPendingNotDone.bind(this);
    }
 
    ontasksPendingDone() {
@@ -32,7 +34,7 @@ class HeaderAlsoTodos extends Component {
                <h1 className="date-header">{this.props.date}</h1>
                <h2 className="tasks-pending-header">{this.state.tasksLeft} tasks Pending</h2>
             </header>
-            <ToDoItem ontasksPendingDone={this.ontasksPendingDone.bind(this)} ontasksPendingNotDone={this.ontasksPendingNotDone.bind(this)} />
+            <ToDoItem ontasksPendingDone={this.ontasksPendingDone} ontasksPendingNotDone={this.ontasksPendingNotDone} />
          </div>
       );
    }

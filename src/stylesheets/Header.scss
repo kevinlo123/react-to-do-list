@@ -5,29 +5,49 @@ $blue: #2356A2;
 
 
 .react-to-do-txt {
-  text-align: center;
-  font-weight: 100;
-  color: $white;
+   text-align: center;
+   font-weight: 100;
+   color: $white;
+   margin: 2rem 0;
 }
 
 header {
-  background: $lightgrey-header;
-  width: 50%;
-  border-radius: 5px 5px 0px 0px;
-  display: flex;
-  justify-content: space-between;
-  min-width: 300px;
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 1rem;
-  border-bottom: 1px solid $lightgrey;
-  .date-header , .tasks-pending-header {
-    font-weight: 100;
-    color: grey;
-    margin: 0;
-    font-size: 25px;
-  }
-  .date-header {
-    color: $blue;
-  }
+   background: $lightgrey-header;
+   width: 425px;
+   border-radius: 5px 5px 0px 0px;
+   display: flex;
+   justify-content: space-between;
+   margin: 0 auto;
+   padding: 1rem;
+   border-bottom: 1px solid $lightgrey;
+   .date-header , .tasks-pending-header {
+      font-weight: 100;
+      color: grey;
+      margin: 0;
+      font-size: 25px;
+   }
+   .date-header {
+      color: $blue;
+   }
+}
+
+@media (max-width: 445px) {
+   .react-to-do-txt {
+      font-size: 2rem;
+   } 
+   header {
+      width: 350px;
+      .date-header , .tasks-pending-header {
+         font-size: 21px;
+      }
+   }
+}
+
+@media (max-width: 380px) {
+   header {
+      width: 300px;
+      .date-header , .tasks-pending-header {
+         font-size: 20px;
+      }
+   }
 }

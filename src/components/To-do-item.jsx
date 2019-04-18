@@ -7,8 +7,11 @@ class ToDoItem extends Component {
    constructor(props) {
       super(props);
       this.state = {
-         toDos: this.startingToDos
+         toDos: this.startingToDos,
       };
+      this.taskFinished = this.taskFinished.bind(this);
+      this.removeItems = this.removeItems.bind(this);
+      this.addItem = this.addItem.bind(this);
    }
 
    startingToDos = [
@@ -23,9 +26,9 @@ class ToDoItem extends Component {
       event.target.classList.toggle("custom-radio-checked");
       event.target.nextSibling.classList.toggle("checked");
       if (event.target.nextSibling.classList.contains("checked")) {
-         this.props.ontasksPendingDone()
+         this.props.ontasksPendingDone();
       } else {
-         this.props.ontasksPendingNotDone()
+         this.props.ontasksPendingNotDone();
       }
       this.updateEvent(this.state.toDos, event);
    }
@@ -47,11 +50,29 @@ class ToDoItem extends Component {
       });
    }
 
+   addItem(item) {
+      if (item === "") {
+         alert("New item cannot be blank!");
+      } else {
+         const newItem = {
+            id: this.state.toDos[this.state.toDos.length - 1].id + 1,
+            task: item,
+            done: false
+         };
+         this.state.toDos.push(newItem);
+         this.setState({
+            toDos: this.state.toDos
+         });
+         console.log(this.state.toDos);
+         return this.props.ontasksPendingNotDone();
+      }
+   }
+
    render() {
       const items = this.state.toDos.map((item) => {
          return (
             <div key={item.id.toString()} className="task-container">
-               <div onClick={this.taskFinished.bind(this)} ref="custom-radio" className="custom-radio"></div>
+               <div onClick={this.taskFinished} ref="custom-radio" className="custom-radio"></div>
                <h1 data-key={item.id.toString()} className="todo-item">{item.task}{this.state.tasksLeft}</h1>
             </div>
          )
@@ -59,7 +80,11 @@ class ToDoItem extends Component {
       return (
          <div>
             {items}
-            <DeleteAdd items={this.state.toDos} removeItems={this.removeItems.bind(this)}/>                     
+            <DeleteAdd 
+               items={this.state.toDos}
+               removeItems={this.removeItems}
+               addItem={this.addItem}
+            />                     
          </div>
       );
    }
