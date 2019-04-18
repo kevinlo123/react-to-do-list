@@ -3,8 +3,9 @@
 **Link to project:** https://todo--react.herokuapp.com/
 
 # Screen Shots
-<img width="1280" alt="screen shot 2018-09-13 at 3 11 17 pm" src="https://user-images.githubusercontent.com/29260507/45510154-63485780-b767-11e8-967e-3c1eab43feb5.png">
-<img width="1280" alt="screen shot 2018-09-13 at 3 11 06 pm" src="https://user-images.githubusercontent.com/29260507/45510166-6b07fc00-b767-11e8-8765-1fa0fb92c828.png">
+<img width="945" alt="Screen Shot 2019-04-18 at 4 54 26 AM" src="https://user-images.githubusercontent.com/29260507/56349851-70af3f80-6197-11e9-83d7-c198cb33c8f9.png">
+<img width="894" alt="Screen Shot 2019-04-18 at 4 54 45 AM" src="https://user-images.githubusercontent.com/29260507/56349857-760c8a00-6197-11e9-8558-24cb31759f46.png">
+<img width="942" alt="Screen Shot 2019-04-18 at 4 54 56 AM" src="https://user-images.githubusercontent.com/29260507/56349871-7e64c500-6197-11e9-9c5b-e748159119e9.png">
 
 ## How It's Made:
 
